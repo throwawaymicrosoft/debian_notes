@@ -24,3 +24,17 @@ reboot
 ```bash
 apt install psmisc
 ```
+# Boot very slow because of drm_kms_helper errors
+This is a bug. To avoid delay you can use workaround. From terminal run:
+```bash
+sudo nano /etc/default/grub
+```
+Then add the kernel boot parameter: video=SVIDEO-1:d, so it will look like this: 
+```bash
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash video=SVIDEO-1:d"
+```
+```bash
+sudo update-grub
+sudo reboot
+```
+
