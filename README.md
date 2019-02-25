@@ -19,3 +19,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 reboot
 ```
+
+# Killall command
+```bash
+apt install psmisc
+```
